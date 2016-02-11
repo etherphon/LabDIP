@@ -15,16 +15,17 @@ public class Startup {
     public static void main(String[] args) {
             
             NumberFormat nf = NumberFormat.getCurrencyInstance();
-            ServiceCalculator hotel = new BaggageServiceTipCalculator(3, ServiceQuality.GOOD);
-            ServiceCalculator airport = new BaggageServiceTipCalculator(3, ServiceQuality.FAIR);
-            ServiceCalculator chilis = new FoodServiceTipCalculator(50.16, ServiceQuality.FAIR);
-            ServiceCalculator ruthschris = new FoodServiceTipCalculator(184.10, ServiceQuality.GOOD);
+            TipCalculator hotel = new BaggageServiceTipCalculator(3, ServiceQuality.GOOD);
+            TipCalculator airport = new BaggageServiceTipCalculator(3, ServiceQuality.FAIR);
+            TipCalculator chilis = new FoodServiceTipCalculator(50.16, ServiceQuality.FAIR);
+            TipCalculator ruthschris = new FoodServiceTipCalculator(184.10, ServiceQuality.GOOD);
             
-            ServiceCalculator[] services = {hotel, airport, chilis, ruthschris };
+            TipCalculator[] services = {hotel, airport, chilis, ruthschris };
+            TipManager tMan = new TipManager();
             
-            for(ServiceCalculator s : services) {
+            for(TipCalculator s : services) {
                 
-            System.out.println("Tip is " + nf.format(s.getTip()));
+            System.out.println("Tip is " + nf.format(tMan.getTip(s)));
             
             }
             
