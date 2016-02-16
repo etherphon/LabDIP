@@ -13,17 +13,19 @@ public class Startup {
 
     public static void main(String[] args) {
 
-        Inputter input1 = new KeyboardInput();
-        Inputter input2 = new ArrayInput();
-        Outputter output1 = new ConsoleOutput();
-        Outputter output2 = new GUIOutput();
+        // add high level messageservice
+        // add message to interfaces
+        MessageService thisMessage = new MessageService();
+        MessageInputter input1 = new KeyboardInput();
+        MessageInputter input2 = new ArrayInput();
+        MessageOutputter output1 = new ConsoleOutput();
+        MessageOutputter output2 = new GUIOutput();
 
-        Inputter[] inputArray = {input1, input2};
-        Outputter[] outputArray = {output1, output2};
+        MessageInputter[] inputArray = {input1, input2};
+        MessageOutputter[] outputArray = {output1, output2};
 
-        for (Outputter o : outputArray) {
-            o.output(input1);
-            o.output(input2);
+        for (int i = 0; i < inputArray.length; i++) {
+            thisMessage.getMessage(inputArray[i], outputArray[i]);
         }
     }
 

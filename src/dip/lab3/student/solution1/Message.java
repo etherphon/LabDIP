@@ -9,8 +9,6 @@ package dip.lab3.student.solution1;
  *
  * @author etherdesign
  */
-public interface Outputter {
- 
-    public abstract void output(Inputter input);
+public class Message {
     
 }

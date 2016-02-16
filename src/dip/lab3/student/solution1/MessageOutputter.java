@@ -5,19 +5,12 @@
  */
 package dip.lab3.student.solution1;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author etherdesign
  */
-public class GUIOutput implements MessageOutputter {
-    
-    public String gOutput;
-    
-    @Override
-    public void output(MessageInputter input) {
-        JOptionPane.showMessageDialog(null,input.getInput());
-    }
+public interface MessageOutputter {
+ 
+    public abstract void output(MessageInputter input);
     
 }

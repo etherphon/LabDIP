@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author etherdesign
  */
-public class KeyboardInput implements Inputter {
+public class KeyboardInput implements MessageInputter {
     
     private String kInput;
     

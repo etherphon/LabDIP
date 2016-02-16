@@ -9,7 +9,7 @@ package dip.lab3.student.solution1;
  *
  * @author etherdesign
  */
-public class ArrayInput implements Inputter {
+public class ArrayInput implements MessageInputter {
     
     String[] aInput = {"One", "Two", "Three", "Four"};
     

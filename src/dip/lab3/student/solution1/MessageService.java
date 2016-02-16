@@ -9,10 +9,11 @@ package dip.lab3.student.solution1;
  *
  * @author etherdesign
  */
-public interface Inputter {
+public class MessageService {
  
-    public abstract void setInput();
-    public abstract String getInput();
+    public void getMessage(MessageInputter msgIn, MessageOutputter msgOut) {
+        msgOut.output(msgIn);
+    }
     
     
 }

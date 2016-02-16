@@ -9,12 +9,12 @@ package dip.lab3.student.solution1;
  *
  * @author etherdesign
  */
-public class ConsoleOutput implements Outputter {
+public class ConsoleOutput implements MessageOutputter {
     
     public String cOutput;
     
     @Override
-    public void output(Inputter input) {
+    public void output(MessageInputter input) {
         System.out.println(input.getInput());
     }
     
